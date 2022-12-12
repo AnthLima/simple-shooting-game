@@ -1,7 +1,3 @@
-using System;
-using System.Threading;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GunScript : MonoBehaviour
@@ -34,6 +30,7 @@ public class GunScript : MonoBehaviour
     private void Shoot() 
     {
         fireTimer =  Time.time + fireRate;
+        Instantiate(bullet, barrel.position, barrel.rotation);
     }
 
     private bool CanShoot() 
